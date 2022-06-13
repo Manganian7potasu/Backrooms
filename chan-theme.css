@@ -1,0 +1,391 @@
+
+                         /*                             13 June 2022                         *\
+                        |                               Chan Theme                            |
+                        |                              by Manganian                           |
+                        |              based on Liminal Theme by Lynch and Etoile             |
+                         \*        For Backrooms Wiki, SCP Wiki and Wanderer's Library       */
+
+/*Imports*/
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Space+Mono&display=swap');
+@import url('https://fontlibrary.org/face/fantasque-sans-mono');
+@import url("http://backrooms-wiki.wdfiles.com/local--files/component%3Atheme/normalize-archived.css");
+@import url("http://backrooms-wiki.wdfiles.com/local--files/component%3Atheme/bhl-archived.css");
+@import url("http://backrooms-wiki.wikidot.com/local--files/component:theme/sidebar.css");
+
+:root {
+    /*
+    Basic Variables
+    */
+
+    /*Theme Name*/
+    --theme-base: "black-highlighter";
+    --theme-id: "chan-theme";
+    --theme-name: "Chan Theme";
+ 
+    /*Header*/
+        /* Placeholders */
+    --logo-image: url("placeholder");
+    --header-title: " ";
+    --header-subtitle: " ";
+
+        /* Fonts and colors */
+    --body-font: 'Kanit', sans-serif;
+    --header-font: 'Kanit', sans-serif;
+    --title-font: 'Kanit', sans-serif;
+    --mono-font: 'Space Mono', monospace;
+ 
+    --white-monochrome: 238, 242, 254;
+    --pale-gray-monochrome: 213, 218, 240;
+
+    --light-gray-monochrome: 52, 52, 92;
+    --gray-monochrome: 238, 242, 255;
+    --black-monochrome: 0, 0, 0;
+    --bright-accent: 52, 52, 92;
+    --medium-accent: 52, 52, 92;
+    --dark-accent: 52, 52, 92;
+    --pale-accent: 52, 52, 92;
+    --thing: 52, 52, 92; /* selected tab background */
+    --niewiem: 238, 242, 255; /* niewiem - body background */
+
+ 
+    --swatch-topmenu-border-color: var(--niewiem);
+ 
+    --link-color: 171, 171, 171;
+    --hover-link-color: 52, 52, 92;
+ 
+    --background-gradient-distance: 0rem;
+ 
+    --gradient-header: linear-gradient(to top, rgba(var(--niewiem)) 0%, rgba(var(--niewiem), 0.90) 100%);
+    --diagonal-stripes: linear-gradient(transparent 0);
+
+}
+
+
+/*
+Selectors and Classes
+*/
+
+div#page-options-bottom-2>a, div#page-options-bottom>a,
+div#page-options-bottom,
+div#page-info,
+#license-area {
+display:none;
+}
+
+.page-tags,
+div.page-watch-options {
+display: none
+}
+
+#login-status {
+display:none;
+}
+
+#top-bar ul {
+    display: none;
+}
+
+#search-top-box {
+display:none;
+}
+
+
+/*Title of the Page*/
+
+#page-title {
+    text: align-center;
+    border-color: var(--niewiem);
+    border-color: var(--ct_col_page-title-border);
+    color: var(--dark-accent);
+    color: #af0a0f;
+    font-weight: normal;
+}
+
+#skrollr-body {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("https://cdn.discordapp.com/attachments/636300070429523971/982379938084692058/unknown.png");
+    background-repeat: repeat-x;
+    background-size:  inherit;
+}
+
+#container {
+   background-image: rgb(var(--niewiem))!important;
+}
+ 
+#header, #top-bar {
+   background-attachment: scroll;
+}
+ 
+#header {
+   background-image: none;
+   height: 0px;
+}
+ 
+#header::before {
+   content: " ";
+   position: absolute;
+   height: 120%;
+   width: 100%;
+   left: 0;
+   top: 0;
+   background-image: var(--logo-image);
+   background-size: auto 16rem;
+   background-position: center;
+   background-repeat: no-repeat;
+   opacity: 0.4;
+}
+
+#header h1, #header h1 a{
+   --header-title: " ‎‎‎";
+   font-size: 2.5rem;
+   position: absolute;
+   top: 0.05rem;
+   margin: 0;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   z-index: 0;
+   color: rgb(var(--black-monochrome));
+   text-align: center;
+}
+
+#page-title::after, .meta-title::after, #page-title::before, .meta-title::before {
+    content: " ";
+    flex-grow: 1;
+    height: 0.0625rem;
+    background: rgb(var(--niewiem));
+   height: 200px;
+}
+
+#header::before {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0.05rem;
+    background-image: var(--logo-image);
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: auto calc(var(--header-height-on-desktop) - 1.5rem);
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+#header h1 a::before {
+    text-shadow: .003rem 0.01rem 0.01rem #0c0c0c;
+    line-height: 1;
+    text-align: left;
+    color: black;
+    width: 1090px;
+    height: 7px;
+    font-size: 0.5rem;
+     
+}
+
+#header h2 span::before {
+    text-shadow: .003rem 0.01rem 0.01rem #0c0c0c;
+    line-height: 1;
+    text-align: left;
+    color: black;
+    width: 80px;
+    height: 7px;
+    font-size: 0.5rem;
+      
+}
+ 
+h1 {
+    font-size: 2rem;
+    color:rgb(var(--dark-accent));
+    line-height: 1
+}
+ 
+h2 {
+    font-size: 1.8rem;
+    color:rgb(var(--dark-accent));
+    line-height: 1
+}
+ 
+h3 {
+    font-size: 1.6rem;
+    color:rgb(var(--dark-accent));
+    line-height: 1
+}
+ 
+h4 {
+    font-size: 1.4rem;
+    color:rgb(var(--dark-accent));
+    line-height: 1
+}
+ 
+h5 {
+    font-size: 1.2rem;
+    color:rgb(var(--dark-accent));
+    line-height: 1
+}
+ 
+h6 {
+    font-size: 1rem;
+    color:rgb(var(--dark-accent));
+    line-height: 1
+}
+ 
+a.newpage {
+   background: transparent;
+   text-decoration: none
+}
+ 
+a.newpage {
+   color: rgb(var(--newpage-color))
+}
+ 
+
+/* DIVs */
+blockquote {
+   box-shadow: 0.2rem 0.4rem 1.2rem rgba(0,0,0,.25);
+}
+ 
+.styled-quote {
+   background-color:rgb(var(--pale-gray-monochrome));
+   border-left: 0.5rem solid rgba(var(--gray-monochrome));
+   padding: 0.1rem 1rem;
+   margin: 0.5rem 0 0.5rem 0.25rem;
+   box-shadow: 0.2rem 0.4rem 1.2rem rgba(0,0,0,.25);
+}
+ 
+.dark-styled-quote {
+   border-left: 0.5rem solid rgba(var(--pale-gray-monochrome));
+   color:rgb(var(--white-monochrome));
+   padding: 0.1rem 1rem;
+   margin: 0.5rem 0 0.5rem 0.25rem;
+   box-shadow: 0.2rem 0.4rem 1.2rem rgba(0,0,0,.25);
+}
+ 
+.dark-styled-quote a{
+    color: rgb(var(--swatch-menubg-medium-color));
+}
+ 
+.lightblock {
+   background-color:rgb(var(--white-monochrone));
+   padding: 0.01rem 1rem;
+   margin: 0.5rem 0 0.5rem 0.25rem;
+   box-shadow: 0 0.8rem 1.2rem rgba(0,0,0,.25);
+}
+ 
+.darkblock {
+   background-color:rgb(var(--medium-accent));
+   color:rgb(var(--white-monochrome));
+   padding: 0.01rem 1rem;
+   margin: 0.5rem 0 0.5rem 0.25rem;
+   box-shadow: 0 0.8rem 1.2rem rgba(0,0,0,.25);
+}
+ 
+.darkblock a {
+    color: rgb(var(--medium-accent));
+}
+
+.titleblock {
+        background-color: rgb(var(--medium-accent));
+        color: rgb(var(--niewiem));
+        padding: 0.5rem 1rem 0.10rem;
+        margin: 1.5rem 0rem 0.5rem 0rem;
+        box-shadow: 0 0.2rem 0.3rem rgba(0,0,0,.5);
+        border: solid rgb(var(--bright-accent)) 2px;
+     }
+
+     .titlebox{
+       color: rgb(var(--niewiem));
+       position: relative;
+       top: -1.6rem;
+       background-color: #6f7090;
+       padding: 0.25rem 1rem;
+       line-height: 0.1rem;
+     }
+
+/* ===Custom DIVs === */
+     /* Bolded */
+.bold600 {
+  font-weight: 900;
+}
+ 
+/* 4CHAN */
+.chan.thread-container {
+  background-color: rgba(var(--niewiem));
+  padding: 5px;
+  font-family: arial,helvetica,sans-serif;
+  color: #000;
+  overflow: hidden;
+  font-size: 1.1em;
+}
+
+.chan .post-content {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 40px;
+  margin-inline-end: 40px;
+}
+.chan .summary {
+  color: #707070;
+  margin-top: 10px;
+}
+.chan .reply-container {
+  display: table;
+}
+.chan .reply-arrows {
+  color: #E0BFB7;
+  float: left;
+  margin-right: 2px;
+  margin-top: 9px;
+  margin-left: 2px;
+}
+.chan .reply {
+  background-color: rgba(var(--pale-gray-monochrome));
+  border: 1px solid #b6c5d8;
+  border-left: none;
+  border-top: none;
+  display: table;
+  padding: 5px;
+  margin: 4px 0;
+}
+ 
+.chan img {
+  float: left;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+.chan .chan-file > p,
+.chan .post-info > p,
+.chan .reply-arrows > p,
+.chan .summary > p,
+.post-content > p {
+  margin: 0;
+}
+.chan .image-container {
+  padding: 0;
+}
+
+@media (max-width: 479px) {
+  .chan .reply-arrows {
+    display: none;
+  }
+  .chan .post-content {
+    margin: 0;
+  }
+  .chan .image-container {
+    text-align: center;
+  }
+}
+
+
+/* Yui */
+.yui-navset .yui-nav .selected a,
+.yui-navset .yui-nav .selected a:focus,
+.yui-navset .yui-nav .selected a:hover {
+    background-color: rgb(var(--thing));    
+}
